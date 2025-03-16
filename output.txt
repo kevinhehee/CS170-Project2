@@ -1,0 +1,499 @@
+Opening file: CS170_Large_Data__17.txt
+On level 1 of the search
+Current feature set: 
+
+--Considering adding feature 1
+TESTING FEATURES: 1 
+705 / 1000
+Accuracy is 0.705
+
+--Considering adding feature 2
+TESTING FEATURES: 2 
+689 / 1000
+Accuracy is 0.689
+
+--Considering adding feature 3
+TESTING FEATURES: 3 
+703 / 1000
+Accuracy is 0.703
+
+--Considering adding feature 4
+TESTING FEATURES: 4 
+693 / 1000
+Accuracy is 0.693
+
+--Considering adding feature 5
+TESTING FEATURES: 5 
+681 / 1000
+Accuracy is 0.681
+
+--Considering adding feature 6
+TESTING FEATURES: 6 
+680 / 1000
+Accuracy is 0.68
+
+--Considering adding feature 7
+TESTING FEATURES: 7 
+696 / 1000
+Accuracy is 0.696
+
+--Considering adding feature 8
+TESTING FEATURES: 8 
+702 / 1000
+Accuracy is 0.702
+
+--Considering adding feature 9
+TESTING FEATURES: 9 
+690 / 1000
+Accuracy is 0.69
+
+--Considering adding feature 10
+TESTING FEATURES: 10 
+696 / 1000
+Accuracy is 0.696
+
+--Considering adding feature 11
+TESTING FEATURES: 11 
+670 / 1000
+Accuracy is 0.67
+
+--Considering adding feature 12
+TESTING FEATURES: 12 
+674 / 1000
+Accuracy is 0.674
+
+--Considering adding feature 13
+TESTING FEATURES: 13 
+683 / 1000
+Accuracy is 0.683
+
+--Considering adding feature 14
+TESTING FEATURES: 14 
+665 / 1000
+Accuracy is 0.665
+
+--Considering adding feature 15
+TESTING FEATURES: 15 
+649 / 1000
+Accuracy is 0.649
+
+--Considering adding feature 16
+TESTING FEATURES: 16 
+668 / 1000
+Accuracy is 0.668
+
+--Considering adding feature 17
+TESTING FEATURES: 17 
+694 / 1000
+Accuracy is 0.694
+
+--Considering adding feature 18
+TESTING FEATURES: 18 
+844 / 1000
+Accuracy is 0.844
+
+--Considering adding feature 19
+TESTING FEATURES: 19 
+691 / 1000
+Accuracy is 0.691
+
+--Considering adding feature 20
+TESTING FEATURES: 20 
+687 / 1000
+Accuracy is 0.687
+
+--Considering adding feature 21
+TESTING FEATURES: 21 
+687 / 1000
+Accuracy is 0.687
+
+--Considering adding feature 22
+TESTING FEATURES: 22 
+682 / 1000
+Accuracy is 0.682
+
+--Considering adding feature 23
+TESTING FEATURES: 23 
+676 / 1000
+Accuracy is 0.676
+
+--Considering adding feature 24
+TESTING FEATURES: 24 
+689 / 1000
+Accuracy is 0.689
+
+--Considering adding feature 25
+TESTING FEATURES: 25 
+677 / 1000
+Accuracy is 0.677
+
+--Considering adding feature 26
+TESTING FEATURES: 26 
+702 / 1000
+Accuracy is 0.702
+
+--Considering adding feature 27
+TESTING FEATURES: 27 
+688 / 1000
+Accuracy is 0.688
+
+--Considering adding feature 28
+TESTING FEATURES: 28 
+662 / 1000
+Accuracy is 0.662
+
+--Considering adding feature 29
+TESTING FEATURES: 29 
+690 / 1000
+Accuracy is 0.69
+
+--Considering adding feature 30
+TESTING FEATURES: 30 
+679 / 1000
+Accuracy is 0.679
+
+--Considering adding feature 31
+TESTING FEATURES: 31 
+683 / 1000
+Accuracy is 0.683
+
+--Considering adding feature 32
+TESTING FEATURES: 32 
+679 / 1000
+Accuracy is 0.679
+
+--Considering adding feature 33
+TESTING FEATURES: 33 
+689 / 1000
+Accuracy is 0.689
+
+--Considering adding feature 34
+TESTING FEATURES: 34 
+694 / 1000
+Accuracy is 0.694
+
+--Considering adding feature 35
+TESTING FEATURES: 35 
+683 / 1000
+Accuracy is 0.683
+
+--Considering adding feature 36
+TESTING FEATURES: 36 
+680 / 1000
+Accuracy is 0.68
+
+--Considering adding feature 37
+TESTING FEATURES: 37 
+702 / 1000
+Accuracy is 0.702
+
+--Considering adding feature 38
+TESTING FEATURES: 38 
+687 / 1000
+Accuracy is 0.687
+
+--Considering adding feature 39
+TESTING FEATURES: 39 
+697 / 1000
+Accuracy is 0.697
+
+--Considering adding feature 40
+TESTING FEATURES: 40 
+744 / 1000
+Accuracy is 0.744
+
+On level 2, added feature 18 to the current set
+
+GOAT FEATURE SET!: 18 
+
+On level 2 of the search
+Current feature set: 
+18 
+--Considering adding feature 1
+TESTING FEATURES: 1 18 
+868 / 1000
+Accuracy is 0.868
+
+--Considering adding feature 2
+TESTING FEATURES: 2 18 
+845 / 1000
+Accuracy is 0.845
+
+--Considering adding feature 3
+TESTING FEATURES: 3 18 
+851 / 1000
+Accuracy is 0.851
+
+--Considering adding feature 4
+TESTING FEATURES: 4 18 
+849 / 1000
+Accuracy is 0.849
+
+--Considering adding feature 5
+TESTING FEATURES: 5 18 
+846 / 1000
+Accuracy is 0.846
+
+--Considering adding feature 6
+TESTING FEATURES: 6 18 
+839 / 1000
+Accuracy is 0.839
+
+--Considering adding feature 7
+TESTING FEATURES: 7 18 
+822 / 1000
+Accuracy is 0.822
+
+--Considering adding feature 8
+TESTING FEATURES: 8 18 
+847 / 1000
+Accuracy is 0.847
+
+--Considering adding feature 9
+TESTING FEATURES: 9 18 
+837 / 1000
+Accuracy is 0.837
+
+--Considering adding feature 10
+TESTING FEATURES: 10 18 
+854 / 1000
+Accuracy is 0.854
+
+--Considering adding feature 11
+TESTING FEATURES: 11 18 
+859 / 1000
+Accuracy is 0.859
+
+--Considering adding feature 12
+TESTING FEATURES: 12 18 
+845 / 1000
+Accuracy is 0.845
+
+--Considering adding feature 13
+TESTING FEATURES: 13 18 
+880 / 1000
+Accuracy is 0.88
+
+--Considering adding feature 14
+TESTING FEATURES: 14 18 
+850 / 1000
+Accuracy is 0.85
+
+--Considering adding feature 15
+TESTING FEATURES: 15 18 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 16
+TESTING FEATURES: 16 18 
+829 / 1000
+Accuracy is 0.829
+
+--Considering adding feature 17
+TESTING FEATURES: 17 18 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 19
+TESTING FEATURES: 18 19 
+853 / 1000
+Accuracy is 0.853
+
+--Considering adding feature 20
+TESTING FEATURES: 18 20 
+859 / 1000
+Accuracy is 0.859
+
+--Considering adding feature 21
+TESTING FEATURES: 18 21 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 22
+TESTING FEATURES: 18 22 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 23
+TESTING FEATURES: 18 23 
+838 / 1000
+Accuracy is 0.838
+
+--Considering adding feature 24
+TESTING FEATURES: 18 24 
+847 / 1000
+Accuracy is 0.847
+
+--Considering adding feature 25
+TESTING FEATURES: 18 25 
+874 / 1000
+Accuracy is 0.874
+
+--Considering adding feature 26
+TESTING FEATURES: 18 26 
+827 / 1000
+Accuracy is 0.827
+
+--Considering adding feature 27
+TESTING FEATURES: 18 27 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 28
+TESTING FEATURES: 18 28 
+821 / 1000
+Accuracy is 0.821
+
+--Considering adding feature 29
+TESTING FEATURES: 18 29 
+832 / 1000
+Accuracy is 0.832
+
+--Considering adding feature 30
+TESTING FEATURES: 18 30 
+840 / 1000
+Accuracy is 0.84
+
+--Considering adding feature 31
+TESTING FEATURES: 18 31 
+828 / 1000
+Accuracy is 0.828
+
+--Considering adding feature 32
+TESTING FEATURES: 18 32 
+839 / 1000
+Accuracy is 0.839
+
+--Considering adding feature 33
+TESTING FEATURES: 18 33 
+837 / 1000
+Accuracy is 0.837
+
+--Considering adding feature 34
+TESTING FEATURES: 18 34 
+838 / 1000
+Accuracy is 0.838
+
+--Considering adding feature 35
+TESTING FEATURES: 18 35 
+851 / 1000
+Accuracy is 0.851
+
+--Considering adding feature 36
+TESTING FEATURES: 18 36 
+834 / 1000
+Accuracy is 0.834
+
+--Considering adding feature 37
+TESTING FEATURES: 18 37 
+857 / 1000
+Accuracy is 0.857
+
+--Considering adding feature 38
+TESTING FEATURES: 18 38 
+829 / 1000
+Accuracy is 0.829
+
+--Considering adding feature 39
+TESTING FEATURES: 18 39 
+831 / 1000
+Accuracy is 0.831
+
+--Considering adding feature 40
+TESTING FEATURES: 18 40 
+959 / 1000
+Accuracy is 0.959
+
+On level 3, added feature 40 to the current set
+
+GOAT FEATURE SET!: 18 40 
+
+On level 3 of the search
+Current feature set: 
+18 40 
+--Considering adding feature 1
+TESTING FEATURES: 1 18 40 
+924 / 1000
+Accuracy is 0.924
+
+--Considering adding feature 2
+TESTING FEATURES: 2 18 40 
+919 / 1000
+Accuracy is 0.919
+
+--Considering adding feature 3
+TESTING FEATURES: 3 18 40 
+924 / 1000
+Accuracy is 0.924
+
+--Considering adding feature 4
+TESTING FEATURES: 4 18 40 
+933 / 1000
+Accuracy is 0.933
+
+--Considering adding feature 5
+TESTING FEATURES: 5 18 40 
+921 / 1000
+Accuracy is 0.921
+
+--Considering adding feature 6
+TESTING FEATURES: 6 18 40 
+913 / 1000
+Accuracy is 0.913
+
+--Considering adding feature 7
+TESTING FEATURES: 7 18 40 
+921 / 1000
+Accuracy is 0.921
+
+--Considering adding feature 8
+TESTING FEATURES: 8 18 40 
+932 / 1000
+Accuracy is 0.932
+
+--Considering adding feature 9
+TESTING FEATURES: 9 18 40 
+925 / 1000
+Accuracy is 0.925
+
+--Considering adding feature 10
+TESTING FEATURES: 10 18 40 
+934 / 1000
+Accuracy is 0.934
+
+--Considering adding feature 11
+TESTING FEATURES: 11 18 40 
+946 / 1000
+Accuracy is 0.946
+
+--Considering adding feature 12
+TESTING FEATURES: 12 18 40 
+920 / 1000
+Accuracy is 0.92
+
+--Considering adding feature 13
+TESTING FEATURES: 13 18 40 
+930 / 1000
+Accuracy is 0.93
+
+--Considering adding feature 14
+TESTING FEATURES: 14 18 40 
+931 / 1000
+Accuracy is 0.931
+
+--Considering adding feature 15
+TESTING FEATURES: 15 18 40 
+924 / 1000
+Accuracy is 0.924
+
+--Considering adding feature 16
+TESTING FEATURES: 16 18 40 
+916 / 1000
+Accuracy is 0.916
+
+--Considering adding feature 17
+TESTING FEATURES: 17 18 40 
+925 / 1000
+Accuracy is 0.925
+
+--Considering adding feature 19
