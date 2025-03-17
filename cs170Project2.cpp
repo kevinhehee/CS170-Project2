@@ -12,7 +12,6 @@ void printSet(const set<int> &s) {
     int counter = 0;
     for (int val: s) {
         cout << val;;
-
         if (++counter != s.size()) {
             cout << ", ";
         }
@@ -30,7 +29,6 @@ vector<double> getFeatures(const vector<vector<double>> &data, const int feature
 
 double getEuclideanDistance(const vector<double> &currFeatures, const vector<double> &neighborFeatures) {
     double sum = 0.0;
-    // cout << "Hi" << endl;
     for (int l = 0; l < currFeatures.size(); l++ ) {
         double difference = currFeatures.at(l) - neighborFeatures.at(l);
         sum += difference * difference;
@@ -68,13 +66,10 @@ double leaveOneOutCrossValidation(const vector<vector<double>> &data, const set<
             numberClassifiedCorrectly++;
         }
     }
-    // cout << "\tUsing features ";
     printSet(featureSet);
-    // cout << endl;
 
     double accuracy = ((double) numberClassifiedCorrectly) / data.size() * 100;
     cout << " - " << accuracy << "% accuracy" << endl;
-    // cout << accuracy << endl;
     return accuracy;
 }
 
@@ -83,7 +78,7 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
     set<int> currFeatureSet;
     set<int> bestFeatureSet;
     double maxTotalAccuracy = 0;
-    
+
     leaveOneOutCrossValidation(data, currFeatureSet);
 
     for (int searchLevel = 1; searchLevel < data.at(0).size(); searchLevel++) {
@@ -94,7 +89,6 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
 
         int featureToAdd = -1;
         double maxLevelAccuracy = 0;
-
         
         for (int feature = 1; feature < data.at(0).size(); feature++) {
             if (currFeatureSet.count(feature)) {
@@ -110,11 +104,6 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
             }
         }
         currFeatureSet.insert(featureToAdd);
-
-        // cout << "\tFeature set ";
-        // printSet(currFeatureSet);
-        // cout << endl;
-        // cout << " was best with " << maxLevelAccuracy << "% accuracy" << endl << endl;
 
         if (maxLevelAccuracy > maxTotalAccuracy) {
             maxTotalAccuracy = maxLevelAccuracy;
@@ -139,19 +128,18 @@ void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
     leaveOneOutCrossValidation(data, currFeatureSet);
 
     for (int searchLevel = 1; searchLevel < data.at(0).size(); searchLevel++) {
-        double maxLevelAccuracy = 0;
-        // cout << "On level " << searchLevel << " of the search" << endl;
-        // cout << "Current feature set " << endl;
-        // printSet(currFeatureSet);
-        // cout << " - " << maxLevelAccuracy << "% accuracy" << endl;
+        cout << endl;
+        cout << "Level " << searchLevel << " starting feature set: ";
+        printSet(currFeatureSet);
+        cout << endl;
 
+        double maxLevelAccuracy = 0;
         int featureToRemove = -1;
         
         for (int feature = 1; feature < data.at(0).size(); feature++) {
             if (!currFeatureSet.count(feature)) {
                 continue;
             }
-
             currFeatureSet.erase(feature);
             double accuracy = leaveOneOutCrossValidation(data, currFeatureSet);
             currFeatureSet.insert(feature);
@@ -163,10 +151,6 @@ void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
 
         }
         currFeatureSet.erase(featureToRemove);
-
-        // cout << "\tFeature set ";
-        // printSet(currFeatureSet);
-        // cout << " was best with " << maxLevelAccuracy << "% accuracy" << endl << endl;
 
         if (maxLevelAccuracy > maxTotalAccuracy) {
             maxTotalAccuracy = maxLevelAccuracy;
