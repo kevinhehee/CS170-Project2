@@ -10,3 +10,8 @@ output.txt
 backwardEliminationOutput.txt
 forwardEliminationOutput.txt
 forwardEliminationSmall.txt
+
+largeBackwardOutput.txt
+largeForwardOutput.txt
+smallBackwardOutput.txt
+smallForwardOutput.txt

@@ -7,16 +7,30 @@
 
 using namespace std;
 
-void printSet(const set<int> &s) {
-    cout << "{";
+// void printSet(const set<int> &s) {
+//     cout << "{";
+//     int counter = 0;
+//     for (int val: s) {
+//         cout << val;;
+//         if (++counter != s.size()) {
+//             cout << ",";
+//         }
+//     }
+//     cout << "}";
+// }
+
+ostream& operator<<(ostream& out, const set<int> &s) {
+    out << "{";
     int counter = 0;
     for (int val: s) {
-        cout << val;;
+        out << val;;
         if (++counter != s.size()) {
-            cout << ", ";
+            out << ",";
         }
     }
-    cout << "}";
+    out << "}";
+    return out;
+
 }
 
 vector<double> getFeatures(const vector<vector<double>> &data, const int featureObjInd, const set<int> &featureSet) {
@@ -66,10 +80,10 @@ double leaveOneOutCrossValidation(const vector<vector<double>> &data, const set<
             numberClassifiedCorrectly++;
         }
     }
-    printSet(featureSet);
+
 
     double accuracy = ((double) numberClassifiedCorrectly) / data.size() * 100;
-    cout << " - " << accuracy << "% accuracy" << endl;
+    cout << "\tUsing feature(s) " << featureSet << " accuracy is "<< accuracy << "%\n";
     return accuracy;
 }
 
@@ -82,11 +96,6 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
     leaveOneOutCrossValidation(data, currFeatureSet);
 
     for (int searchLevel = 1; searchLevel < data.at(0).size(); searchLevel++) {
-        cout << endl;
-        cout << "Level " << searchLevel << " starting feature set: ";
-        printSet(currFeatureSet);
-        cout << endl;
-
         int featureToAdd = -1;
         double maxLevelAccuracy = 0;
         
@@ -103,7 +112,9 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
                 featureToAdd = feature;
             }
         }
+
         currFeatureSet.insert(featureToAdd);
+        cout << "\nFeature set " << currFeatureSet << " was best, accuracy is " << maxLevelAccuracy << "%\n\n";
 
         if (maxLevelAccuracy > maxTotalAccuracy) {
             maxTotalAccuracy = maxLevelAccuracy;
@@ -111,9 +122,7 @@ void forwardSelectionFeatureSearch(const vector<vector<double>> &data) {
         }
     }
 
-    cout << "Search finished. The best feature subset is ";
-    printSet(bestFeatureSet);
-    cout << endl;
+    cout << "Finished search!! The best feature subset is " << bestFeatureSet << ", which has an accuracy of " << maxTotalAccuracy << "%\n";
 }
 
 void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
@@ -128,10 +137,6 @@ void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
     leaveOneOutCrossValidation(data, currFeatureSet);
 
     for (int searchLevel = 1; searchLevel < data.at(0).size(); searchLevel++) {
-        cout << endl;
-        cout << "Level " << searchLevel << " starting feature set: ";
-        printSet(currFeatureSet);
-        cout << endl;
 
         double maxLevelAccuracy = 0;
         int featureToRemove = -1;
@@ -151,6 +156,7 @@ void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
 
         }
         currFeatureSet.erase(featureToRemove);
+        cout << "\nFeature set " << currFeatureSet << " was best, accuracy is " << maxLevelAccuracy << "%\n\n";
 
         if (maxLevelAccuracy > maxTotalAccuracy) {
             maxTotalAccuracy = maxLevelAccuracy;
@@ -158,16 +164,14 @@ void backwardEliminationFeatureSearch(const vector<vector<double>> &data) {
         }
     }
 
-    cout << "Search finished. The best feature subset is ";
-    printSet(bestFeatureSet);
-    cout << endl;
+    cout << "Finished search!! The best feature subset is " << bestFeatureSet << ", which has an accuracy of " << maxTotalAccuracy << "%\n";
 }
 
 vector<vector<double>> readData(const string &inputFile) {
     ifstream inFS(inputFile);
 
     if (!inFS.is_open()) {
-        cout << "File not opened!" << endl;
+        cout << "File not opened!\n";
         exit(1);
     }
 
@@ -192,26 +196,28 @@ int main(int argc, char* argv[]) {
     string inputFile = "";
     int choice = -1;
 
-    cout << "Welcome to Kevin He's Feature Selection Program" << endl;
+    cout << "Welcome to Kevin He's Feature Selection Program\n";
     if (argc == 3) {
-        cout << "Opening file: " << argv[1] << endl << endl;
+        cout << "Opening file: " << argv[1] << "\n\n";
         inputFile = argv[1];
         choice = stoi(argv[2]);
     } else {
         cout << "Type in the name of the file to test: ";
         cin >> inputFile;
-        cout << endl;
+        cout << "\n";
 
-        cout << "Type the number of the algorithm you want to run: " << endl;
-        cout << "\t1) Forward Selection" << endl;
-        cout << "\t2) Backward Elimination" << endl << endl;
+        cout << "Type the number of the algorithm you want to run:\n";
+        cout << "\t1) Forward Selection\n";
+        cout << "\t2) Backward Elimination\n\n";
         cin >> choice;
     }
 
     vector<vector<double>> data = readData(inputFile);
 
+    cout << "\n\nThis dataset has " << data.at(0).size() - 1 << " features (not including the class attribute), with " << data.size() << " instances.\n\n";
+
     if (choice == 1) {
-        cout << "Starting Forward Selection\n\n";
+        cout << "Beginning Search.\n\n";
         auto startTime = chrono::high_resolution_clock::now();
         forwardSelectionFeatureSearch(data);
         auto endTime = chrono::high_resolution_clock::now();
@@ -219,10 +225,10 @@ int main(int argc, char* argv[]) {
         chrono::duration<double> elapsedSeconds = endTime - startTime;
         double minutes = elapsedSeconds.count() / 60.0;
 
-        cout << std::fixed << std::setprecision(2) << "Forward Selection took " << elapsedSeconds.count() << " seconds or " << minutes << " minutes" << endl;
+        cout << std::fixed << std::setprecision(2) << "\nForward Selection took " << elapsedSeconds.count() << " seconds or " << minutes << " minutes.\n";
     }
     else if (choice == 2) {
-        cout << "Starting Backward Elimination\n\n";
+        cout << "Beginning Search.\n\n";
         auto startTime = chrono::high_resolution_clock::now();
         backwardEliminationFeatureSearch(data);
         auto endTime = chrono::high_resolution_clock::now();
@@ -230,7 +236,7 @@ int main(int argc, char* argv[]) {
         chrono::duration<double> elapsedSeconds = endTime - startTime;
         double minutes = elapsedSeconds.count() / 60.0;
 
-        cout << std::fixed << std::setprecision(2) << "Backward Elimination took " << elapsedSeconds.count() << " seconds or " << minutes << " minutes" << endl;
+        cout << std::fixed << std::setprecision(2) << "\nBackward Elimination took " << elapsedSeconds.count() << " seconds or " << minutes << " minutes\n";
     }
 
     return 0;
