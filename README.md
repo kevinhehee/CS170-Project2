@@ -1,6 +1,6 @@
 To run the program:
 
-1. ```g++ cs170Project2.cpp```
+1. ```g++ cs170Project2.cpp``` or ```g++ -O3 -march=native -flto cs170Project2.cpp```
 
 Then run the program with either command line arguments or input
 
